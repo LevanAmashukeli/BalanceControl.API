@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Services", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Shared", "BalanceControl.Shared\BalanceControl.Shared.csproj", "{9C45B53B-25FE-4219-AB1A-FE6065BA0F3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceController.Application", "BalanceController.Application\BalanceController.Application.csproj", "{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceControl.Application", "BalanceControl.Application\BalanceControl.Application.csproj", "{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{9C45B53B-25FE-4219-AB1A-FE6065BA0F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C45B53B-25FE-4219-AB1A-FE6065BA0F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C45B53B-25FE-4219-AB1A-FE6065BA0F3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,7 +43,7 @@ Global
 		{DDE1EA8D-3FB8-4B02-9CA6-CA47591AF2F6} = {A03B2EC0-2240-46B4-BAB4-F2125AC59E30}
 		{938FF700-79CC-4683-9921-281B896E016E} = {A03B2EC0-2240-46B4-BAB4-F2125AC59E30}
 		{9C45B53B-25FE-4219-AB1A-FE6065BA0F3D} = {A03B2EC0-2240-46B4-BAB4-F2125AC59E30}
-		{EB746267-D8F8-459E-8DD3-0B4B18BA5FC3} = {A03B2EC0-2240-46B4-BAB4-F2125AC59E30}
+		{B7C883E0-0B19-4F4A-B13D-A73FB80258FF} = {A03B2EC0-2240-46B4-BAB4-F2125AC59E30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B91BFC5C-61DF-4024-B09E-6368258F2787}
