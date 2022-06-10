@@ -1,9 +1,10 @@
 ﻿using BalanceControl.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace BalanceControl.API.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("api")]
     [ApiController]
     public class BalanceController : ControllerBase
     {
@@ -15,6 +16,7 @@ namespace BalanceControl.API.Controllers
         }
 
         [HttpGet("balance")]
+        [SwaggerOperation(Summary = "ბალანსის ნახვა", Description = "აბრუნებს კაზინოს ბალანსს")]
         public decimal Balance() => _getBalanceService.GetBalance();
     }
 }

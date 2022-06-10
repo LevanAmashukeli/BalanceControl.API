@@ -2,10 +2,11 @@
 using BalanceControl.Application.Models;
 using Balances;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace BalanceControl.API.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("api")]
     [ApiController]
     public class WithdrawController : ControllerBase
     {
@@ -17,6 +18,7 @@ namespace BalanceControl.API.Controllers
         }
 
         [HttpPost("withdraw/{{transactionid}}/{{amount}}")]
+        [SwaggerOperation(Summary = "თანხის გადატანა თამაშში", Description = "აკეთებს თანხის გადმორიცხვას თამაშის ბალანსიდან კაზინოს ბალანსზე")]
         public ResponseViewModel<ErrorCode> Withdraw(BalanceChangeModel model) => _withdrawService.Withdraw(model);
     }
 }

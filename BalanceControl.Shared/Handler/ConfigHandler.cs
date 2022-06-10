@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace BalanceControl.Shared.Handler
 {
-    public class ConfigHandler
+    public static class ConfigHandler
     {
         public static string Config(ErrorCode name)
         {
