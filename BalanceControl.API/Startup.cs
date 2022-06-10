@@ -1,4 +1,5 @@
-using Balances;
+using BalanceControl.Application.Interfaces;
+using BalanceControl.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,8 +22,9 @@ namespace BalanceControl.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddTransient<IBalanceManager, CasinoBalanceManager>();
-            services.AddTransient<IBalanceManager, GameBalanceManager>();
+            services.AddSingleton<IDepositService, DepositService>();
+            services.AddSingleton<IWithdrawService, WithdrawService>();  
+            services.AddSingleton<IGetBalanceService, GetBalanceService>();
 
             services.AddHttpContextAccessor();
 

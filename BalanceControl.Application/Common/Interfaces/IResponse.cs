@@ -1,6 +1,6 @@
 ﻿using Balances;
 
-namespace BalanceControl.Services.Interfaces
+namespace BalanceControl.Application.Interfaces
 {
     public interface IResponse<T>
     {

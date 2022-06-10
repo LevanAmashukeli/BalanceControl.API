@@ -1,5 +1,5 @@
 ﻿
-namespace BalanceControl.Services.Models
+namespace BalanceControl.Application.Models
 {
     public class BalanceChangeModel
     {

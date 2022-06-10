@@ -1,23 +1,24 @@
-﻿using BalanceControl.Services.Interfaces;
-using BalanceControl.Services.Models;
+﻿using BalanceControl.Application.Interfaces;
+using BalanceControl.Application.Models;
+using BalanceControl.Shared.Handler;
 using Balances;
 
 namespace BalanceControl.Services
 {
     public class WithdrawService : IWithdrawService
     {
-        private readonly CasinoBalanceManager _casinoBalanceManager;
-        private readonly GameBalanceManager _gameBalanceManager;
+        private readonly IBalanceManager _casinoBalanceManager;
+        private readonly IBalanceManager _gameBalanceManager;
 
-        public WithdrawService(CasinoBalanceManager casinoBalanceManager, GameBalanceManager gameBalanceManager)
+        public WithdrawService()
         {
-            _casinoBalanceManager = casinoBalanceManager;
-            _gameBalanceManager = gameBalanceManager;
+            _casinoBalanceManager = new CasinoBalanceManager();
+            _gameBalanceManager = new GameBalanceManager();
         }
 
         public ResponseViewModel<ErrorCode> Withdraw(BalanceChangeModel model)
         {
-            if (model == null)
+            if (model.IsNull())
             {
                 return new ResponseViewModel<ErrorCode>
                 {
@@ -26,9 +27,9 @@ namespace BalanceControl.Services
                 };
             }
 
-            var incrCasinoBalance = _casinoBalanceManager.IncreaseBalance(model.Amount, model.TransactioId);
+            var incrCasinoBalance = _casinoBalanceManager.DecreaseBalance(model.Amount, model.TransactioId);
 
-            if (incrCasinoBalance != ErrorCode.Success)
+            if (incrCasinoBalance.IsNotSuccess())
             {
                 return new ResponseViewModel<ErrorCode>
                 {
@@ -36,9 +37,9 @@ namespace BalanceControl.Services
                 };
             }
 
-            var decrGameBalance = _gameBalanceManager.DecreaseBalance(model.Amount, model.TransactioId);
+            var decrGameBalance = _gameBalanceManager.IncreaseBalance(model.Amount, model.TransactioId);
 
-            if (decrGameBalance != ErrorCode.Success)
+            if (decrGameBalance.IsNotSuccess())
             {
                 return new ResponseViewModel<ErrorCode>
                 {

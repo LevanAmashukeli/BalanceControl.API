@@ -1,7 +1,7 @@
-﻿using BalanceControl.Services.Models;
+﻿using BalanceControl.Application.Models;
 using Balances;
 
-namespace BalanceControl.Services.Interfaces
+namespace BalanceControl.Application.Interfaces
 {
         public interface IWithdrawService
         {
