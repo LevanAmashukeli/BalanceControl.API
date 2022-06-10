@@ -15,7 +15,6 @@ namespace BalanceControl.Services
         public decimal GetBalance()
         {
             return _casinoBalanceManager.GetBalance();
-            
         }
     }
 }

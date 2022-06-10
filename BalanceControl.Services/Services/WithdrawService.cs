@@ -23,7 +23,7 @@ namespace BalanceControl.Services
                 return new ResponseViewModel<ErrorCode>
                 {
                     ErrorCode = ErrorCode.UnknownError,
-                    StatusMessage = "Amount or/and TransactioID can't be empty!"
+                    StatusMessage = ConfigHandler.Config(ErrorCode.UnknownError)
                 };
             }
 
@@ -33,7 +33,8 @@ namespace BalanceControl.Services
             {
                 return new ResponseViewModel<ErrorCode>
                 {
-                    ErrorCode = incrCasinoBalance
+                    ErrorCode = incrCasinoBalance,
+                    StatusMessage = ConfigHandler.Config(incrCasinoBalance)
                 };
             }
 
@@ -43,11 +44,12 @@ namespace BalanceControl.Services
             {
                 return new ResponseViewModel<ErrorCode>
                 {
-                    ErrorCode = decrGameBalance
+                    ErrorCode = decrGameBalance,
+                    StatusMessage = ConfigHandler.Config(decrGameBalance)
                 };
             }
 
-            return new ResponseViewModel<ErrorCode> { ErrorCode = ErrorCode.Success };
+            return new ResponseViewModel<ErrorCode> { ErrorCode = ErrorCode.Success, StatusMessage = ConfigHandler.Config(ErrorCode.Success) };
         }
     }
 }
