@@ -7,6 +7,5 @@ namespace BalanceControl.Application.Models
     {
         public ErrorCode ErrorCode { get; set; } = ErrorCode.Success;
         public string StatusMessage { get; set; }
-        public T Model { get; set; }
     }
 }

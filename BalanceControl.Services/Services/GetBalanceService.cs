@@ -5,7 +5,7 @@ namespace BalanceControl.Services
 {
     public class GetBalanceService : IGetBalanceService
     {
-        private readonly IBalanceManager _casinoBalanceManager;
+        private readonly CasinoBalanceManager _casinoBalanceManager;
 
         public GetBalanceService()
         {

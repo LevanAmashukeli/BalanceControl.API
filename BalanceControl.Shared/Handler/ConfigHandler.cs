@@ -1,5 +1,4 @@
 ﻿using Balances;
-using System;
 using System.Configuration;
 
 namespace BalanceControl.Shared.Handler

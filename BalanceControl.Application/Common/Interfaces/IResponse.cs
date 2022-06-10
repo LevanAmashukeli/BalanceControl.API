@@ -6,6 +6,5 @@ namespace BalanceControl.Application.Interfaces
     {
         ErrorCode ErrorCode { get; set; }
         string StatusMessage { get; set; }
-        T Model { get; set; }
     }
 }

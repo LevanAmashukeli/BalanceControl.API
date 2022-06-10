@@ -7,8 +7,8 @@ namespace BalanceControl.Services
 {
     public class WithdrawService : IWithdrawService
     {
-        private readonly IBalanceManager _casinoBalanceManager;
-        private readonly IBalanceManager _gameBalanceManager;
+        private readonly CasinoBalanceManager _casinoBalanceManager;
+        private readonly GameBalanceManager _gameBalanceManager;
 
         public WithdrawService()
         {
