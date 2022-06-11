@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using BalanceControl.Application.Services;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BalanceControl.Services.Tests.ServiceTests
 {

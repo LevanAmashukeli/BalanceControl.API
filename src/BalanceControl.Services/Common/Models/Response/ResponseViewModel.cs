@@ -1,7 +1,7 @@
-﻿using BalanceControl.Application.Interfaces;
+﻿using BalanceControl.Services.Common.Interfaces;
 using Balances;
 
-namespace BalanceControl.Application.Models
+namespace BalanceControl.Services.Models.Response
 {
     public class ResponseViewModel<T> : IResponse<T>
     {

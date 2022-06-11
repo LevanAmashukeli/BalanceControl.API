@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BalanceControl.Services\BalanceControl.Services.csproj" />
+    <ProjectReference Include="..\BalanceControl.Application\BalanceControl.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

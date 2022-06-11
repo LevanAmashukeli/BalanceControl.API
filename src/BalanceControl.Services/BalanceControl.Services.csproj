@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BalanceControl.Application\BalanceControl.Application.csproj" />
     <ProjectReference Include="..\BalanceControl.Shared\BalanceControl.Shared.csproj" />
   </ItemGroup>
 

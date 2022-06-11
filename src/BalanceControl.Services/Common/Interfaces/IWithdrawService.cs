@@ -1,8 +1,8 @@
-﻿using BalanceControl.Application.Common.Models.Balance;
-using BalanceControl.Application.Models;
+﻿using BalanceControl.Services.Models.Balance;
+using BalanceControl.Services.Models.Response;
 using Balances;
 
-namespace BalanceControl.Application.Interfaces
+namespace BalanceControl.Services.Common.Interfaces
 {
         public interface IWithdrawService
         {

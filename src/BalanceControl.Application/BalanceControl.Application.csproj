@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BalanceControl.Services\BalanceControl.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="BalanceManager">
       <HintPath>..\..\BalanceManager.dll</HintPath>
     </Reference>

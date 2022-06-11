@@ -1,5 +1,5 @@
 ﻿
-namespace BalanceControl.Application.Models
+namespace BalanceControl.Services.Models.Abstract
 {
     public class AbstractBalanceModel
     {

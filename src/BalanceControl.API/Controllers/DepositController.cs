@@ -1,6 +1,6 @@
-﻿using BalanceControl.Application.Common.Models.Balance;
-using BalanceControl.Application.Interfaces;
-using BalanceControl.Application.Models;
+﻿using BalanceControl.Services.Common.Interfaces;
+using BalanceControl.Services.Models.Balance;
+using BalanceControl.Services.Models.Response;
 using Balances;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;

@@ -1,7 +1,7 @@
-﻿using BalanceControl.Application.Interfaces;
+﻿using BalanceControl.Services.Common.Interfaces;
 using Balances;
 
-namespace BalanceControl.Services
+namespace BalanceControl.Application.Services
 {
     public class GetBalanceService : IGetBalanceService
     {

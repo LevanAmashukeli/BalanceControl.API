@@ -1,4 +1,5 @@
-﻿using BalanceControl.Application.Common.Models.Balance;
+﻿using BalanceControl.Application.Services;
+using BalanceControl.Services.Models.Balance;
 using Balances;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

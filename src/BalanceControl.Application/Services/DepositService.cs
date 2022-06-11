@@ -1,10 +1,10 @@
-﻿using BalanceControl.Application.Common.Models.Balance;
-using BalanceControl.Application.Interfaces;
-using BalanceControl.Application.Models;
+﻿using BalanceControl.Services.Common.Interfaces;
+using BalanceControl.Services.Models.Balance;
+using BalanceControl.Services.Models.Response;
 using BalanceControl.Shared.Handler;
 using Balances;
 
-namespace BalanceControl.Services
+namespace BalanceControl.Application.Services
 {
     public class DepositService : IDepositService
     {

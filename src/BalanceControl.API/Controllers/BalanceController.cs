@@ -1,4 +1,4 @@
-﻿using BalanceControl.Application.Interfaces;
+﻿using BalanceControl.Services.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
