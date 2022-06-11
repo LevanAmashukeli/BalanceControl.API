@@ -1,6 +1,8 @@
-﻿using BalanceControl.Shared.Handler;
-using Balances;
+﻿using Balances;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Configuration;
+using System.IO;
 
 namespace BalanceControl.Shared.Tests.HandlerTests
 {
@@ -11,9 +13,16 @@ namespace BalanceControl.Shared.Tests.HandlerTests
         public void Success_Config_Test()
         {
             var success = ErrorCode.Success;
-            var configTest = ConfigHandler.Config(success);
 
-            Assert.Equals(configTest, "ტრანზაქცია წარმატებულია. ბალანსი დარედაქტირდა.");
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDfirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.Parent.FullName;
+            var appSettingPath = Path.Combine(projectDfirectory, @"src\BalanceControl.API", "App.config");
+
+            ConfigurationFileMap fileMap = new ConfigurationFileMap(appSettingPath);
+            Configuration configuration = ConfigurationManager.OpenMappedMachineConfiguration(fileMap);
+            string value = configuration.AppSettings.Settings[success.ToString()].Value;
+
+            Assert.AreEqual(value, "ტრანზაქცია წარმატებულია. ბალანსი დარედაქტირდა.");
         }
     }
 }

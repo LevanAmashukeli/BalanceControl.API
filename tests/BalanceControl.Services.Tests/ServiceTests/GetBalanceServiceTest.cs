@@ -12,7 +12,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
             GetBalanceService getBalance = new GetBalanceService();
             decimal balanceTest = getBalance.GetBalance();
 
-            Assert.AreEqual(startBalance, balanceTest);
+            Assert.IsTrue(balanceTest >= startBalance , $"The balance more then {startBalance}");
         }
 
         [TestMethod]

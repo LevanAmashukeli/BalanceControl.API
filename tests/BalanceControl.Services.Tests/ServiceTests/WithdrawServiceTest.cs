@@ -21,7 +21,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
 
             var successCode = ErrorCode.Success;
 
-            Assert.AreEqual(successCode, methodTest.ErrorCode);
+            Assert.IsTrue(successCode == methodTest.ErrorCode, $"{ErrorCode.DuplicateTransactionId}, please run this test separately for take success status");
         }
 
         [TestMethod]
