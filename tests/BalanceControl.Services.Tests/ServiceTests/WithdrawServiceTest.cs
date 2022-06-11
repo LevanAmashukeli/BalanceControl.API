@@ -13,7 +13,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
             var testBalanceModel = new WithdrawBalanceChangeModel
             {
                 Amount = 1000,
-                TransactioId = "jsdfh7733df"
+                TransactioId = "jsdfhs7733df"
             };
 
             WithdrawService withdraw = new WithdrawService();
@@ -21,7 +21,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
 
             var successCode = ErrorCode.Success;
 
-            Assert.IsTrue(successCode == methodTest.ErrorCode, $"{ErrorCode.DuplicateTransactionId}, please run this test separately for take success status");
+            Assert.IsTrue(successCode == methodTest.ErrorCode, $"Error Code: {methodTest.ErrorCode}");
         }
 
         [TestMethod]

@@ -13,7 +13,7 @@ namespace BalanceControl.Shared.Tests.HandlerTests
             var success = ErrorCode.UnknownError;
             var isNotSuccessTest = IsNotSuccessHandler.IsNotSuccess(success);
 
-            Assert.IsTrue(isNotSuccessTest, "The ErrorCode is Successed");
+            Assert.IsTrue(isNotSuccessTest, "ErrorCode: Successed");
         }
     }
 }

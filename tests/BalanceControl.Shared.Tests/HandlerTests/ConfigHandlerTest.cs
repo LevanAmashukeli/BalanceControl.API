@@ -14,15 +14,22 @@ namespace BalanceControl.Shared.Tests.HandlerTests
         {
             var success = ErrorCode.Success;
 
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDfirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.Parent.FullName;
-            var appSettingPath = Path.Combine(projectDfirectory, @"src\BalanceControl.API", "App.config");
+            try
+            {
+                string workingDirectory = Environment.CurrentDirectory;
+                string projectDfirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.Parent.FullName;
+                var appSettingPath = Path.Combine(projectDfirectory, @"src\BalanceControl.API", "App.config");
 
-            ConfigurationFileMap fileMap = new ConfigurationFileMap(appSettingPath);
-            Configuration configuration = ConfigurationManager.OpenMappedMachineConfiguration(fileMap);
-            string value = configuration.AppSettings.Settings[success.ToString()].Value;
+                ConfigurationFileMap fileMap = new ConfigurationFileMap(appSettingPath);
+                Configuration configuration = ConfigurationManager.OpenMappedMachineConfiguration(fileMap);
+                string value = configuration.AppSettings.Settings[success.ToString()].Value;
 
-            Assert.AreEqual(value, "ტრანზაქცია წარმატებულია. ბალანსი დარედაქტირდა.");
+                Assert.AreEqual(value, "ტრანზაქცია წარმატებულია. ბალანსი დარედაქტირდა.");
+            }
+            catch (Exception)
+            {
+                Assert.Fail("Check 'App.config' path");
+            }
         }
     }
 }
