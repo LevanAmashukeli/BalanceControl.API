@@ -1,4 +1,5 @@
-﻿using BalanceControl.Application.Interfaces;
+﻿using BalanceControl.Application.Common.Models.Balance;
+using BalanceControl.Application.Interfaces;
 using BalanceControl.Application.Models;
 using Balances;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,6 @@ namespace BalanceControl.API.Controllers
 
         [HttpPost("withdraw/{{transactionid}}/{{amount}}")]
         [SwaggerOperation(Summary = "თანხის გადატანა თამაშში", Description = "აკეთებს თანხის გადმორიცხვას თამაშის ბალანსიდან კაზინოს ბალანსზე")]
-        public ResponseViewModel<ErrorCode> Withdraw(BalanceChangeModel model) => _withdrawService.Withdraw(model);
+        public ResponseViewModel<ErrorCode> Withdraw(WithdrawBalanceChangeModel model) => _withdrawService.Withdraw(model);
     }
 }

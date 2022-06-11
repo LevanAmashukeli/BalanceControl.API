@@ -1,4 +1,5 @@
-﻿using BalanceControl.Application.Interfaces;
+﻿using BalanceControl.Application.Common.Models.Balance;
+using BalanceControl.Application.Interfaces;
 using BalanceControl.Application.Models;
 using BalanceControl.Shared.Handler;
 using Balances;
@@ -16,7 +17,7 @@ namespace BalanceControl.Services
             _gameBalanceManager = new GameBalanceManager();
         }
 
-        public ResponseViewModel<ErrorCode> Deposit(BalanceChangeModel model)
+        public ResponseViewModel<ErrorCode> Deposit(DepositBalanceChangeModel model)
         {
             if(model.IsNull())
             {
