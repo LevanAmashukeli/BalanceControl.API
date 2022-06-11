@@ -14,7 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BalanceControl.Application\BalanceControl.Application.csproj" />
+    <ProjectReference Include="..\..\src\BalanceControl.Services\BalanceControl.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BalanceManager">
+      <HintPath>..\..\BalanceManager.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

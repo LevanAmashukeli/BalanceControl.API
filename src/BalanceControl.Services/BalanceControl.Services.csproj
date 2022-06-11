@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <ProjectReference Include="..\BalanceControl.Application\BalanceControl.Application.csproj" />
+    <ProjectReference Include="..\BalanceControl.Shared\BalanceControl.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BalanceManager">
-      <HintPath>..\BalanceManager.dll</HintPath>
+      <HintPath>..\..\BalanceManager.dll</HintPath>
     </Reference>
   </ItemGroup>
 

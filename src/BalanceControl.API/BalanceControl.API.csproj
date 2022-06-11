@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Reference Include="BalanceManager">
-      <HintPath>..\BalanceManager.dll</HintPath>
+      <HintPath>..\..\BalanceManager.dll</HintPath>
     </Reference>
   </ItemGroup>
 
