@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "731a75e9-c287-449b-9bbc-6dec3a5b6f00",
+		"name": "Balancemanager Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "ErrorCode Handler",
+					"item": [
+						{
+							"name": "Withdraw",
+							"item": [
+								{
+									"name": "Transaction Rejected",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 11)\r",
+													"{ pm.test(\"Transaction is Rejected. Balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else\r",
+													"{ pm.test(\"Unknown Error! Unknown if balance has changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": -1000,\r\n  \"transactioId\": \"sdf3f3sf445af\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/withdraw/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"withdraw",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Not Enought Balance",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 12)\r",
+													"{ pm.test(\"Not Enough money. The balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else\r",
+													"{ pm.test(\"Unknown Error! Unknown if balance has changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": 100000,\r\n  \"transactioId\": \"sdf3f3sf445af\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/withdraw/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"withdraw",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Deposit Scenarios",
+							"item": [
+								{
+									"name": "Transaction Rejected",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 11)\r",
+													"{ pm.test(\"Transaction is Rejected. Balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else\r",
+													"{ pm.test(\"Unknown Error! Unknown if balance has changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": 0,\r\n  \"transactioId\": \"sdf3fsdf3sf445af\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/deposit/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"deposit",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Not Enought Balance",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 12)\r",
+													"{ pm.test(\"Not Enough money. The balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else\r",
+													"{ pm.test(\"Unknown Error! Unknown if balance has changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": 100000,\r\n  \"transactioId\": \"sdf3f3sf445af\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/deposit/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"deposit",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Standart Tests",
+					"item": [
+						{
+							"name": "Balance",
+							"item": [
+								{
+									"name": "Check Balance",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"\r",
+													"if(jsonData > 10000)\r",
+													"{ pm.test(jsonData + \" more than 10000\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else\r",
+													"pm.test(jsonData + \" less than 10000\", function () {\r",
+													"pm.response.to.have.status(200);})"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BaseURL}}/balance",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"balance"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Withdraw",
+							"item": [
+								{
+									"name": "Withdraw",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 10)\r",
+													"{ pm.test(\"Transaction is Successful. Balance is edited.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else if (jsonData.errorCode == 13)\r",
+													"{ pm.test(\"Transaction ID already exists. The balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": 3000,\r\n  \"transactioId\": \"sdf3fd3sf445af\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/withdraw/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"withdraw",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Deposit",
+							"item": [
+								{
+									"name": "Deposit",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Response time is less than 15ms\", function(){\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+													"});\r",
+													"\r",
+													"let jsonData = pm.response.json();\r",
+													"if(jsonData.errorCode == 10)\r",
+													"{ pm.test(\"Transaction is Successful. Balance is edited.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}\r",
+													"else if (jsonData.errorCode == 13)\r",
+													"{ pm.test(\"Transaction ID already exists. The balance has not changed.\", function () { \r",
+													"  pm.response.to.have.status(200);\r",
+													"});}"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"amount\": 1000,\r\n  \"transactioId\": \"kggjk77ghgvhgv7676\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BaseURL}}/deposit/{transactionid}/{amount}",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"deposit",
+												"{transactionid}",
+												"{amount}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
