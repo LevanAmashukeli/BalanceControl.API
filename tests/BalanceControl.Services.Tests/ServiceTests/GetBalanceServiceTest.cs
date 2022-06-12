@@ -22,7 +22,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
             GetBalanceService getBalance = new GetBalanceService();
             decimal balanceTest = getBalance.GetBalance();
 
-            Assert.IsTrue(balanceTest < 0, "The balance is less than 0");
+            Assert.IsTrue(balanceTest > 0, $"The balance is {balanceTest}, less than zero ");
         }
     }
 }

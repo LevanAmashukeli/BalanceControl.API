@@ -1,8 +1,6 @@
-﻿using Balances;
+﻿using BalanceControl.Shared.Extension;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Configuration;
-using System.IO;
 
 namespace BalanceControl.Shared.Tests.HandlerTests
 {
@@ -10,25 +8,17 @@ namespace BalanceControl.Shared.Tests.HandlerTests
     public class ConfigHandlerTest
     {
         [TestMethod]
-        public void When_СonfigPath_NotExist_ThrowException_ToCheckConfigPath()
+        public void When_Success_GetEnumDescription_IfNot_ThrowException_ToEnumDescriptionCheck()
         {
-            var success = ErrorCode.Success;
-
             try
             {
-                string workingDirectory = Environment.CurrentDirectory;
-                string projectDfirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.Parent.FullName;
-                var appSettingPath = Path.Combine(projectDfirectory, @"src\BalanceControl.API", "App.config");
+                var result = DescriptionErrorCodeTest.Success.GetEnumDescription();
 
-                ConfigurationFileMap fileMap = new ConfigurationFileMap(appSettingPath);
-                Configuration configuration = ConfigurationManager.OpenMappedMachineConfiguration(fileMap);
-                string value = configuration.AppSettings.Settings[success.ToString()].Value;
-
-                Assert.AreEqual(value, "ტრანზაქცია წარმატებულია. ბალანსი დარედაქტირდა.");
+                Assert.AreEqual(result, "Transaction is Successful. Balance is edited.");
             }
             catch (Exception)
             {
-                Assert.Fail("Check 'App.config' path");
+                Assert.Fail("Enum's Description not found");
             }
         }
     }

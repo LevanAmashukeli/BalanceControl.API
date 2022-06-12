@@ -1,8 +1,11 @@
 ﻿using BalanceControl.Services.Common.Interfaces;
 using BalanceControl.Services.Models.Balance;
 using BalanceControl.Services.Models.Response;
+using BalanceControl.Shared;
 using BalanceControl.Shared.Handler;
 using Balances;
+using System;
+using System.Linq;
 
 namespace BalanceControl.Application.Services
 {
@@ -27,7 +30,6 @@ namespace BalanceControl.Application.Services
                     StatusMessage = ConfigHandler.Config(ErrorCode.UnknownError)
                 };
             }
-
             var decrGameBalance = _gameBalanceManager.DecreaseBalance(model.Amount, model.TransactioId);
 
             if (decrGameBalance.IsNotSuccess())
