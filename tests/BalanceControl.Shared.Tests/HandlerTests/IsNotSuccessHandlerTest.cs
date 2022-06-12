@@ -1,4 +1,4 @@
-﻿using BalanceControl.Shared.Handler;
+﻿using BalanceControl.Shared.Handlers;
 using Balances;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

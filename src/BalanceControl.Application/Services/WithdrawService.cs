@@ -1,7 +1,7 @@
 ﻿using BalanceControl.Services.Common.Interfaces;
 using BalanceControl.Services.Models.Balance;
 using BalanceControl.Services.Models.Response;
-using BalanceControl.Shared.Handler;
+using BalanceControl.Shared.Handlers;
 using Balances;
 
 namespace BalanceControl.Application.Services

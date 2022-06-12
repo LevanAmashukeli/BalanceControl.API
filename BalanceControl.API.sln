@@ -14,19 +14,17 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Application", "src\BalanceControl.Application\BalanceControl.Application.csproj", "{B7C883E0-0B19-4F4A-B13D-A73FB80258FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional Items", "Additional Items", "{6C07F13A-CC22-451C-B279-039B1E458E8C}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\Singular\Assignment .Net Developer\readme.md = ..\..\..\Desktop\Singular\Assignment .Net Developer\readme.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A430D7CE-4A7B-4307-9B43-02BE3778CA23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Shared.Tests", "tests\BalanceControl.Shared.Tests\BalanceControl.Shared.Tests.csproj", "{6CE05E9D-FD18-4B4E-A0C8-574AA3B7DFD6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Services.Tests", "tests\BalanceControl.Services.Tests\BalanceControl.Services.Tests.csproj", "{45874430-5CA6-422E-BDAE-1BC522830877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalanceControl.Application.Tests", "tests\BalanceControl.Application.Tests\BalanceControl.Application.Tests.csproj", "{45874430-5CA6-422E-BDAE-1BC522830877}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman Collection Test", "Postman Collection Test", "{51452F32-1BDE-4873-B993-6F4AEFA15C78}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Desktop\Singular\Balancemanager Tests.postman_collection.json = ..\..\..\Desktop\Singular\Balancemanager Tests.postman_collection.json
+		Additional Items\readme.md = Additional Items\readme.md
 	EndProjectSection
 EndProject
 Global

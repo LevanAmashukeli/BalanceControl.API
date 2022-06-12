@@ -1,11 +1,8 @@
 ﻿using BalanceControl.Services.Common.Interfaces;
 using BalanceControl.Services.Models.Balance;
 using BalanceControl.Services.Models.Response;
-using BalanceControl.Shared;
-using BalanceControl.Shared.Handler;
+using BalanceControl.Shared.Handlers;
 using Balances;
-using System;
-using System.Linq;
 
 namespace BalanceControl.Application.Services
 {

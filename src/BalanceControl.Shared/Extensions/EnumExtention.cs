@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace BalanceControl.Shared.Extension
+namespace BalanceControl.Shared.Extensions
 {
     public static class EnumExtention
     {

@@ -1,6 +1,6 @@
 ﻿using Balances;
 
-namespace BalanceControl.Shared.Handler
+namespace BalanceControl.Shared.Handlers
 {
     public static class IsNotSuccessHandler
     {

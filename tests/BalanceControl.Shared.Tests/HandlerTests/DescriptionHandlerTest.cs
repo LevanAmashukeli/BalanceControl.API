@@ -1,4 +1,4 @@
-﻿using BalanceControl.Shared.Extension;
+﻿using BalanceControl.Shared.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
