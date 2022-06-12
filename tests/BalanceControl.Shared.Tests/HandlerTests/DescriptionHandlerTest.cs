@@ -5,7 +5,7 @@ using System;
 namespace BalanceControl.Shared.Tests.HandlerTests
 {
     [TestClass]
-    public class ConfigHandlerTest
+    public class DescriptionHandlerTest
     {
         [TestMethod]
         public void When_Success_GetEnumDescription_IfNot_ThrowException_ToEnumDescriptionCheck()
