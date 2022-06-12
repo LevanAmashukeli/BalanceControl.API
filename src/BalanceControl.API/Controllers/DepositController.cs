@@ -19,7 +19,7 @@ namespace BalanceControl.API.Controllers
         }
 
         [HttpPost("deposit/{{transactionid}}/{{amount}}")]
-        [SwaggerOperation(Summary = "თანხის გადატანა კაზინოში", Description = "აკეთებს თანხის გადარიცხვას კაზინოს ბალანსიდან თამაშის ბალანსზე")]
+        [SwaggerOperation(Summary = "Transfer money to Casino balance", Description = "Transfer money from Game to Casino balance")]
         public ResponseViewModel<ErrorCode> Deposit(DepositBalanceChangeModel model) => _depositService.Deposit(model);
     }
 }

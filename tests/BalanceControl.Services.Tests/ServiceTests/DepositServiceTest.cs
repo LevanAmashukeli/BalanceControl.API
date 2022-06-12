@@ -9,7 +9,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
     public class DepositServiceTest
     {
         [TestMethod]
-        public void Sucess_Deposit_Test()
+        public void When_Success_Expect_DepositMoney()
         {
             var testBalanceModel = new DepositBalanceChangeModel
             {
@@ -26,7 +26,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
         }
 
         [TestMethod]
-        public void NoEnoughtBalance_Deposit_Test()
+        public void When_NotEnoughtBalance_Expect_DepositMoneyToFail()
         {
             var testBalanceModel = new DepositBalanceChangeModel
             {
@@ -37,13 +37,13 @@ namespace BalanceControl.Services.Tests.ServiceTests
             DepositService deposit = new DepositService();
             var methodTest = deposit.Deposit(testBalanceModel);
 
-            var noEnoughtBalanceCode = ErrorCode.NotEnoughtBalance;
+            var notEnoughtBalanceCode = ErrorCode.NotEnoughtBalance;
 
-            Assert.AreEqual(noEnoughtBalanceCode, methodTest.ErrorCode);
+            Assert.AreEqual(notEnoughtBalanceCode, methodTest.ErrorCode);
         }
 
         [TestMethod]
-        public void TransactionRejected_Deposit_Test()
+        public void When_TransactionRejected_Expect_DepositMoneyToFail()
         {
             var testBalanceModel = new DepositBalanceChangeModel
             {
@@ -60,7 +60,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
         }
 
         [TestMethod]
-        public void DuplicateTransaction_Deposit_Test()
+        public void When_DuplicateTransaction_Expect_DepositMoneyToFail()
         {
             var testBalanceModel = new DepositBalanceChangeModel
             {

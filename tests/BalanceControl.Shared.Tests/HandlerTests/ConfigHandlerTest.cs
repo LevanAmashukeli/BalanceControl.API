@@ -10,7 +10,7 @@ namespace BalanceControl.Shared.Tests.HandlerTests
     public class ConfigHandlerTest
     {
         [TestMethod]
-        public void Success_Config_Test()
+        public void When_СonfigPath_NotExist_ThrowException_ToCheckConfigPath()
         {
             var success = ErrorCode.Success;
 

@@ -9,7 +9,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
     public class WithdrawServiceTest
     {
         [TestMethod]
-        public void Sucess_Withdraw_Test()
+        public void When_Success_Expect_WithdrawMoney()
         {
             var testBalanceModel = new WithdrawBalanceChangeModel
             {
@@ -26,7 +26,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
         }
 
         [TestMethod]
-        public void NoEnoughtBalance_Withdraw_Test()
+        public void When_NotEnoughtBalance_Expect_WithdrawMoneyToFail()
         {
             var testBalanceModel = new WithdrawBalanceChangeModel
             {
@@ -37,13 +37,13 @@ namespace BalanceControl.Services.Tests.ServiceTests
             WithdrawService withdraw = new WithdrawService();
             var methodTest = withdraw.Withdraw(testBalanceModel);
 
-            var noEnoughtBalanceCode = ErrorCode.NotEnoughtBalance;
+            var notEnoughtBalanceCode = ErrorCode.NotEnoughtBalance;
 
-            Assert.AreEqual(noEnoughtBalanceCode, methodTest.ErrorCode);
+            Assert.AreEqual(notEnoughtBalanceCode, methodTest.ErrorCode);
         }
 
         [TestMethod]
-        public void TransactionRejected_Withdraw_Test()
+        public void When_TransactionRejected_Expect_WithdrawMoneyToFail()
         {
             var testBalanceModel = new WithdrawBalanceChangeModel
             {
@@ -60,7 +60,7 @@ namespace BalanceControl.Services.Tests.ServiceTests
         }
 
         [TestMethod]
-        public void DuplicateTransaction_Withdraw_Test()
+        public void When_DuplicateTransaction_Expect_WithdrawMoneyToFail()
         {
             var testBalanceModel = new WithdrawBalanceChangeModel
             {

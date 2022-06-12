@@ -19,7 +19,7 @@ namespace BalanceControl.API.Controllers
         }
 
         [HttpPost("withdraw/{{transactionid}}/{{amount}}")]
-        [SwaggerOperation(Summary = "თანხის გადატანა თამაშში", Description = "აკეთებს თანხის გადმორიცხვას თამაშის ბალანსიდან კაზინოს ბალანსზე")]
+        [SwaggerOperation(Summary = "Transfer money to Game balance", Description = "Transfer money from Casino to Game balance")]
         public ResponseViewModel<ErrorCode> Withdraw(WithdrawBalanceChangeModel model) => _withdrawService.Withdraw(model);
     }
 }

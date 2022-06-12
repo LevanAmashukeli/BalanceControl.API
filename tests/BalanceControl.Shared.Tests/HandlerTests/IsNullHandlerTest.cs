@@ -7,7 +7,7 @@ namespace BalanceControl.Shared.Tests.HandlerTests
     public class IsNullHandlerTest
     {
         [TestMethod]
-        public void IsNull_Test()
+        public void When_Parameter_IsNotNull_Should_Be_Thrown_ObjectIsNotNull()
         {
             object entity = null;
             var isNullTest = IsNullHandler.IsNull(entity);

@@ -16,7 +16,7 @@ namespace BalanceControl.API.Controllers
         }
 
         [HttpGet("balance")]
-        [SwaggerOperation(Summary = "ბალანსის ნახვა", Description = "აბრუნებს კაზინოს ბალანსს")]
+        [SwaggerOperation(Summary = "Check Balance", Description = "Returns Casino balance")]
         public decimal Balance() => _getBalanceService.GetBalance();
     }
 }

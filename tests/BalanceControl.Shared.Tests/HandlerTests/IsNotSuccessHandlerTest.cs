@@ -8,7 +8,7 @@ namespace BalanceControl.Shared.Tests.HandlerTests
     public class IsNotSuccessHandlerTest
     {
         [TestMethod]
-        public void IsNotSuccess_Test()
+        public void When_Parameter_IsNotSuccess_Should_Be_Thrown_ErrorCodeSuccessed()
         {
             var success = ErrorCode.UnknownError;
             var isNotSuccessTest = IsNotSuccessHandler.IsNotSuccess(success);
