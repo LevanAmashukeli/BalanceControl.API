@@ -19,7 +19,7 @@ Inserted in the "*Additional Items*" folder is a configured file called "*Balanc
 1. ***BalanceController*** => Summary: "*Check Balance*" => Description: "*Returns Casino balance*".
 2. ***DepositController*** => Summary: "*Transfer money to Casino balance*" => Description: "*Transfer money from Game to Casino balance*".
 3. ***WithdrawController*** => Summary: "*Transfer money to Game balance*" => Description: "*Transfer money from Casino to Game balance*";
-
+<br><br/>
 # About Folder: "src"
 
 **ASP.NET Core**: a **WEB API** project has been created, layers such as ***Application, Services, Shared*** have also been created separately in the *Class Library*.
@@ -52,7 +52,7 @@ Inserted in the "*Additional Items*" folder is a configured file called "*Balanc
 
 ##### "*AutoMapper*" and "*DataBase*"  were not used in the project because the project does not require it.
 
-
+<br><br/>
 # About Folder: "tests" 
 
 ####  MSUnitTests
@@ -64,7 +64,7 @@ The ***tests*** folder contains ***MSUnitTests*** Layers such as "*BalanceContro
  Also, this project has a Helper folder, which contains the *Enum* class "*DescriptionErrorCodeTest*" - the "*ErrorCode*" and its *Description*.
 
 
-
+<br><br/>
 # About Me
 ####  LinkedIn : https://www.linkedin.com/in/levan-amashukeli/
 
