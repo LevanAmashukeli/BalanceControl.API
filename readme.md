@@ -53,7 +53,7 @@ Inserted in the "*Additional Items*" folder is a configured file called "*Balanc
 ##### "*AutoMapper*" and "*DataBase*"  were not used in the project because the project does not require it.
 
 
-## About Folder: "tests" 
+# About Folder: "tests" 
 
 ####  MSUnitTests
 
