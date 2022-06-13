@@ -1,6 +1,6 @@
 ﻿# Balance Control
 
-The project is written for this company and is ready to be checked out.
+The project is written for the company and is ready to be checked out.
 <br><br/>
 #### Project published on Azure Server and ready to test: https://balancecontrolapi.azurewebsites.net/swagger
 <br><br/>
