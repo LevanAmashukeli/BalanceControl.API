@@ -30,6 +30,7 @@ Inserted in the "*Additional Items*" folder is a configured file called "*Balanc
  - ***WithdrawController*** - Subtracts from the casino balance and adds money to the Game account by calling two methods (*IncreaseBalance* (*Game*) and *DecreaseBalance* (*Casino*)).
  - ***DepositController*** - Subtracts from the Game balance and adds money to the Casino account by calling two methods (IncreaseBalance(*Casino*) and DecreaseBalance(*Game*));
 <br><br/>
+
  **Application** - i have written 3 services :
  - ***GetBalanceService*** -the controller works with the help of  *IGetBalanceService* interface. is created for the   "*CasinoBalanceManager*" check . (because of the 2 different interface was not implemented  in  "*BalanceManager.DLL*" ,i had to create my own interfaces and work directly with "*CasinoBalanceManager*" and  "*GameBalanceManager*").
  - ***DepositService*** - the controller works with "*DepositService*" via "*IDepositService*" interface. Created to call the "*IncreaseBalance*" method on the "*CasinoBalanceManager*" service and to call the "*DecreaseBalance*" method on the "*GameBalanceManager*". Because two interfaces were not implemented in "*BalanceManager.DLL*", I decided not to use "*IBalanceManager*" and create my own interfaces to work directly with "*CasinoBalanceManager*" and "*GameBalanceManager*".
