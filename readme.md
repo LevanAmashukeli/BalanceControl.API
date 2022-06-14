@@ -2,7 +2,7 @@
 
 The project is written for the company and is ready to be checked out.
 <br><br/>
-#### Project published on Azure Server and ready to test: https://balancecontrolapi.azurewebsites.net/swagger
+#### Project published on Azure Server and ready to test: https://balancecontrollapi.azurewebsites.net/swagger
 <br><br/>
 
 # About Folder: "Additional Items"
